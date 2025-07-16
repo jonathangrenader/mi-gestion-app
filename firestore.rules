@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Acceso a la lista de empresas del usuario
+    match /users/{userId}/empresas/{empresaId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    // Acceso a datos de una empresa
+    match /empresas/{empresaId}/{document=**} {
+      allow read, write: if request.auth != null && exists(/databases/$(database)/documents/users/$(request.auth.uid)/empresas/$(empresaId));
+    }
+    // Acceso a suscripciones
+    match /suscripciones/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow write: if false; // Solo Functions pueden escribir
+    }
+  }
+}
