@@ -1,0 +1,1 @@
+import '@testing-library/jest-dom'; // Extiende Jest con matchers de testing-library
