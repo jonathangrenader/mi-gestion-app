@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gestión Empresarial Multiempresa
 
 Aplicación web para la gestión de empresas en Argentina, con soporte multiempresa, integración con AFIP, y versiones Gratuita, Lite y Premium. Desarrollada con React, Firebase, y Vite.
@@ -121,3 +122,7 @@ Aplicación web para la gestión de empresas en Argentina, con soporte multiempr
 
 ## Licencia
 MIT
+=======
+# mi-gestion-app
+Aplicación web para gestión empresarial multiempresa con integración AFIP
+>>>>>>> f55a7d83ec99d0f6b1c064ea4c87565b918afef7
